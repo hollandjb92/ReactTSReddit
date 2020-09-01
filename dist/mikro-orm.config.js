@@ -7,15 +7,14 @@ require("dotenv").config();
 const Post_1 = require("./entities/Post");
 const constants_1 = require("./constants");
 const path_1 = __importDefault(require("path"));
-console.log("dirname: ", __dirname);
 exports.default = {
     migrations: {
         path: path_1.default.join(__dirname, './migrations'),
         pattern: /^[\w-]+\d+\.[tj]s$/,
     },
     entities: [Post_1.Post],
-    dbName: "redditclone",
-    user: "postgres",
+    dbName: process.env.PG_DATABASE,
+    user: process.env.PG_USER,
     password: process.env.PG_PASSWORD,
     debug: !constants_1.__prod__,
     type: "postgresql"
