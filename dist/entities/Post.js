@@ -25,7 +25,7 @@ __decorate([
 ], Post.prototype, "id", void 0);
 __decorate([
     type_graphql_1.Field(() => String),
-    core_1.Property(),
+    core_1.Property({ type: "date" }),
     __metadata("design:type", Object)
 ], Post.prototype, "createdAt", void 0);
 __decorate([
