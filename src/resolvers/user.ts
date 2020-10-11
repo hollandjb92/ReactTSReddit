@@ -85,6 +85,7 @@ export class UserResolver {
 			}
 		}
 		//sets cookie/log in user after register
+		console.log(user)
 		req.session.userId = user.id
 		return {user}
 	}
